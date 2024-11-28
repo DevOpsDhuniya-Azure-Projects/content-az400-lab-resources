@@ -23,8 +23,10 @@ Step 3: Set Up Build Agent
 		○ Download the agent for Linux and copy the URL.
 	2. Configure Agent on VM:
 		○ SSH into your lab VM.
-		○ Create a directory, download, and unzip the agent.
+		○ Create a directory, download, and unzip the agent. mkdir Downloads && cd Downloads;wget <AGENT_URL>;mkdir myagent && cd myagent;tar zxvf <PACKAGE>
 		○ Run ./config.sh to configure the agent using the PAT created earlier.
+			When prompted for your server URL, go back to Azure DevOps and grab the URL from your browser. It will look something like https://dev.azure.com/clouduser..., 
+			followed by some characters (i.e., copy everything up to and not including /MyFirstProject). Paste this in the terminal.
 		○ Start the agent with ./run.sh.
 Step 4: Configure CI/CD Pipeline
 	1. Create Pipeline Environment:
